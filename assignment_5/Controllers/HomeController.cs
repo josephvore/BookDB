@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using assignment_5.Models.ViewModels;
 
 namespace assignment_5.Controllers
 {
@@ -20,9 +21,25 @@ namespace assignment_5.Controllers
             _repository = repository;
         }
 
-        public IActionResult Index()
+        //Items per page = 5
+        public int PageSize = 5;
+
+        public IActionResult Index(int page = 1)
         {
-            return View(_repository.Books);
+            return View(new ProjectListViewModel
+            {
+                Books = _repository.Books
+                    .OrderBy(p => p.BookID)
+                    .Skip((page - 1) * PageSize)
+                    .Take(PageSize),
+                PageInfo = new PageInfo
+                {
+                    CurrentPage = page,
+                    ItemsPerPage = PageSize,
+                    TotalNumItems = _repository.Books.Count()
+                }
+
+            });
         }
 
         public IActionResult Privacy()

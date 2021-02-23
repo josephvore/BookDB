@@ -44,6 +44,7 @@ namespace assignment_5
             else
             {
                 app.UseExceptionHandler("/Home/Error");
+
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
@@ -57,8 +58,14 @@ namespace assignment_5
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    "pagination",
+
+                    //Improve the URLs so that the user can type /P2 to access the second page and /P3 to access the third page and so on.
+                    "P{page}",
+                    new { Controller = "Home", action = "Index" });
+
+                endpoints.MapDefaultControllerRoute();
+
             });
 
             //Database correctly seeded with book data

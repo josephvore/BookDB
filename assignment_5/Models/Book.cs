@@ -41,5 +41,8 @@ namespace assignment_5.Models
 
         [Required]
         public double Price { get; set; }
+
+        //New Number of Pages attribute
+        public int NumberOfPages { get; set; }
     }
 }

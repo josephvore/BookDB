@@ -22,6 +22,7 @@ namespace assignment_5.Models
 
 
             //Creates new Book objects in given range
+            //NumberOfPages added on each book
             if (!context.Books.Any())
             {
                 context.Books.AddRange(
@@ -36,7 +37,8 @@ namespace assignment_5.Models
                         ISBN = "978-0451419439",
                         Classification = "Fiction",
                         Category = "Classic",
-                        Price = 9.95
+                        Price = 9.95,
+                        NumberOfPages = 1488
                     },
 
                     new Book
@@ -49,7 +51,8 @@ namespace assignment_5.Models
                         ISBN = "978-0743270755",
                         Classification = "Non-Fiction",
                         Category = "Biography",
-                        Price = 14.58
+                        Price = 14.58,
+                        NumberOfPages = 944
                     },
 
                     new Book
@@ -62,7 +65,8 @@ namespace assignment_5.Models
                         ISBN = "978-0553384611",
                         Classification = "Non-Fiction",
                         Category = "Biography",
-                        Price = 21.54
+                        Price = 21.54,
+                        NumberOfPages = 832
                     },
 
                     new Book
@@ -75,7 +79,8 @@ namespace assignment_5.Models
                         ISBN = "978-0812981254",
                         Classification = "Non-Fiction",
                         Category = "Biography",
-                        Price = 11.61
+                        Price = 11.61,
+                        NumberOfPages = 864
                     },
 
                     new Book
@@ -88,7 +93,8 @@ namespace assignment_5.Models
                         ISBN = "978-0812974492",
                         Classification = "Non-Fiction",
                         Category = "Historical",
-                        Price = 13.33
+                        Price = 13.33,
+                        NumberOfPages = 528
                     },
 
                     new Book
@@ -101,7 +107,8 @@ namespace assignment_5.Models
                         ISBN = "978-0804171281",
                         Classification = "Fiction",
                         Category = " Historical Fiction",
-                        Price = 15.95
+                        Price = 15.95,
+                        NumberOfPages = 288
                     },
 
                     new Book
@@ -114,7 +121,8 @@ namespace assignment_5.Models
                         ISBN = "978-1455586691",
                         Classification = "Non-Fiction",
                         Category = "Self-Help",
-                        Price = 14.99
+                        Price = 14.99,
+                        NumberOfPages = 304
                     },
 
                     new Book
@@ -127,7 +135,8 @@ namespace assignment_5.Models
                         ISBN = "978-1455523023",
                         Classification = "Non-Fiction",
                         Category = "Self-Help",
-                        Price = 21.66
+                        Price = 21.66,
+                        NumberOfPages = 240
                     },
 
                     new Book
@@ -140,7 +149,8 @@ namespace assignment_5.Models
                         ISBN = "978-1591847984",
                         Classification = "Non-Fiction",
                         Category = "Business",
-                        Price = 29.16
+                        Price = 29.16,
+                        NumberOfPages = 400
                     },
 
                     new Book
@@ -153,8 +163,55 @@ namespace assignment_5.Models
                         ISBN = "978-0553393613",
                         Classification = "Fiction",
                         Category = "Thrillers",
-                        Price = 15.03
+                        Price = 15.03,
+                        NumberOfPages = 642
+                    },
+
+                    //  After you have incorporated the Pagination, add three of your own favorite books to the
+                    //  SeedData, and rebuild the database to test that the Pagination works as it should.
+
+                    new Book
+                    {
+                        Title = "Midnight in Chernobyl",
+                        Publisher = "Simon & Schuster",
+                        AuthorFirst = "Adam",
+                        AuthorMiddle = "",
+                        AuthorLast = "Higginbotham",
+                        ISBN = "978-1501134616",
+                        Classification = "Non-Fiction",
+                        Category = "Disasters",
+                        Price = 19.00,
+                        NumberOfPages = 560
+                    },
+
+                    new Book
+                    {
+                        Title = "The Way of Kings",
+                        Publisher = "Tor Books",
+                        AuthorFirst = "Brandon",
+                        AuthorMiddle = "",
+                        AuthorLast = "Sanderson",
+                        ISBN = "978-0765326355",
+                        Classification = "Fiction",
+                        Category = "Fantasy",
+                        Price = 18.23,
+                        NumberOfPages = 1007
+                    },
+
+                    new Book
+                    {
+                        Title = "Words of Radiance",
+                        Publisher = "Tor Books",
+                        AuthorFirst = "Brandon",
+                        AuthorMiddle = "",
+                        AuthorLast = "Sanderson",
+                        ISBN = "978-0765326362",
+                        Classification = "Fiction",
+                        Category = "Fantasy",
+                        Price = 19.05,
+                        NumberOfPages = 1087
                     }
+
                 );
 
                 //Saves the changes in the context object
