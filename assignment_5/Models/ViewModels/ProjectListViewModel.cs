@@ -6,5 +6,6 @@ namespace assignment_5.Models.ViewModels
     {
         public IEnumerable<Book> Books { get; set; }
         public PageInfo PageInfo { get; set; }
+        public string CurrentCategory { get; set; }
     }
 }

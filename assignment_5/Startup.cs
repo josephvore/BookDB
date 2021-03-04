@@ -1,3 +1,5 @@
+//This is where the endpoints are found
+
 using assignment_5.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -56,7 +58,21 @@ namespace assignment_5
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
+
             {
+                //• Improve the URLs to a pattern that is more user-friendly
+                endpoints.MapControllerRoute("catpage",
+                    "{category}/{page:int}",
+                    new { Controller = "Home", action = "Index" });
+
+                endpoints.MapControllerRoute("page",
+                    "Books/{page:int}",
+                    new { Controller = "Home", action = "Index" });
+
+                endpoints.MapControllerRoute("category",
+                    "{category}",
+                    new { Controller = "Home", action = "Index", page = 1 });
+
                 endpoints.MapControllerRoute(
                     "pagination",
 

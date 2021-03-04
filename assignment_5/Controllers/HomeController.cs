@@ -24,11 +24,12 @@ namespace assignment_5.Controllers
         //Items per page = 5
         public int PageSize = 5;
 
-        public IActionResult Index(int page = 1)
+        public IActionResult Index(string category, int page = 1)
         {
             return View(new ProjectListViewModel
             {
                 Books = _repository.Books
+                    .Where(b => category == null || b.Category == category)
                     .OrderBy(p => p.BookID)
                     .Skip((page - 1) * PageSize)
                     .Take(PageSize),
@@ -36,8 +37,12 @@ namespace assignment_5.Controllers
                 {
                     CurrentPage = page,
                     ItemsPerPage = PageSize,
-                    TotalNumItems = _repository.Books.Count()
-                }
+
+                    //Add the ability to filter by category in the Controller
+                    TotalNumItems = category == null ? _repository.Books.Count() :
+                    _repository.Books.Where(x => x.Category == category).Count()
+                },
+                CurrentCategory =  category
 
             });
         }

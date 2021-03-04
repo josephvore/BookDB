@@ -1,0 +1,22 @@
+﻿@model Book
+
+
+<tr>
+    <td>@Model.BookID</td>
+    <td>@Model.Title</td>
+    <td>@Model.AuthorFirst</td>
+    @if (Model.AuthorMiddle == "")
+    {
+        <td>--</td>
+    }
+    else
+    {
+        <td>@Model.AuthorMiddle</td>
+    }
+    <td>@Model.AuthorLast</td>
+    <td>@Model.ISBN</td>
+    <td>@Model.Classification</td>
+    <td>@Model.Category</td>
+    <td>$@Model.Price</td>
+    <td>@Model.NumberOfPages</td>
+</tr>
