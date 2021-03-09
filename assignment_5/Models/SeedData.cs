@@ -37,7 +37,7 @@ namespace assignment_5.Models
                         ISBN = "978-0451419439",
                         Classification = "Fiction",
                         Category = "Classic",
-                        Price = 9.95,
+                        Price = 9.95m,
                         NumberOfPages = 1488
                     },
 
@@ -51,7 +51,7 @@ namespace assignment_5.Models
                         ISBN = "978-0743270755",
                         Classification = "Non-Fiction",
                         Category = "Biography",
-                        Price = 14.58,
+                        Price = 14.58m,
                         NumberOfPages = 944
                     },
 
@@ -65,7 +65,7 @@ namespace assignment_5.Models
                         ISBN = "978-0553384611",
                         Classification = "Non-Fiction",
                         Category = "Biography",
-                        Price = 21.54,
+                        Price = 21.54m,
                         NumberOfPages = 832
                     },
 
@@ -79,7 +79,7 @@ namespace assignment_5.Models
                         ISBN = "978-0812981254",
                         Classification = "Non-Fiction",
                         Category = "Biography",
-                        Price = 11.61,
+                        Price = 11.61m,
                         NumberOfPages = 864
                     },
 
@@ -93,7 +93,7 @@ namespace assignment_5.Models
                         ISBN = "978-0812974492",
                         Classification = "Non-Fiction",
                         Category = "Historical",
-                        Price = 13.33,
+                        Price = 13.33m,
                         NumberOfPages = 528
                     },
 
@@ -107,7 +107,7 @@ namespace assignment_5.Models
                         ISBN = "978-0804171281",
                         Classification = "Fiction",
                         Category = " Historical Fiction",
-                        Price = 15.95,
+                        Price = 15.95m,
                         NumberOfPages = 288
                     },
 
@@ -121,7 +121,7 @@ namespace assignment_5.Models
                         ISBN = "978-1455586691",
                         Classification = "Non-Fiction",
                         Category = "Self-Help",
-                        Price = 14.99,
+                        Price = 14.99m,
                         NumberOfPages = 304
                     },
 
@@ -135,7 +135,7 @@ namespace assignment_5.Models
                         ISBN = "978-1455523023",
                         Classification = "Non-Fiction",
                         Category = "Self-Help",
-                        Price = 21.66,
+                        Price = 21.66m,
                         NumberOfPages = 240
                     },
 
@@ -149,7 +149,7 @@ namespace assignment_5.Models
                         ISBN = "978-1591847984",
                         Classification = "Non-Fiction",
                         Category = "Business",
-                        Price = 29.16,
+                        Price = 29.16m,
                         NumberOfPages = 400
                     },
 
@@ -163,7 +163,7 @@ namespace assignment_5.Models
                         ISBN = "978-0553393613",
                         Classification = "Fiction",
                         Category = "Thrillers",
-                        Price = 15.03,
+                        Price = 15.03m,
                         NumberOfPages = 642
                     },
 
@@ -180,7 +180,7 @@ namespace assignment_5.Models
                         ISBN = "978-1501134616",
                         Classification = "Non-Fiction",
                         Category = "Disasters",
-                        Price = 19.00,
+                        Price = 19.00m,
                         NumberOfPages = 560
                     },
 
@@ -194,7 +194,7 @@ namespace assignment_5.Models
                         ISBN = "978-0765326355",
                         Classification = "Fiction",
                         Category = "Fantasy",
-                        Price = 18.23,
+                        Price = 18.23m,
                         NumberOfPages = 1007
                     },
 
@@ -208,7 +208,7 @@ namespace assignment_5.Models
                         ISBN = "978-0765326362",
                         Classification = "Fiction",
                         Category = "Fantasy",
-                        Price = 19.05,
+                        Price = 19.05m,
                         NumberOfPages = 1087
                     }
 

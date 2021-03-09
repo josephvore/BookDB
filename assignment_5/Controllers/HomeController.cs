@@ -21,21 +21,23 @@ namespace assignment_5.Controllers
             _repository = repository;
         }
 
-        //Items per page = 5
+        //Items per page variable that is set to = 5
         public int PageSize = 5;
 
-        public IActionResult Index(string category, int page = 1)
+        //Controller method with an action of Index()
+        public IActionResult Index(string category, int pageNum = 1)
         {
+            //View Model
             return View(new ProjectListViewModel
             {
                 Books = _repository.Books
                     .Where(b => category == null || b.Category == category)
                     .OrderBy(p => p.BookID)
-                    .Skip((page - 1) * PageSize)
+                    .Skip((pageNum - 1) * PageSize)
                     .Take(PageSize),
                 PageInfo = new PageInfo
                 {
-                    CurrentPage = page,
+                    CurrentPage = pageNum,
                     ItemsPerPage = PageSize,
 
                     //Add the ability to filter by category in the Controller
